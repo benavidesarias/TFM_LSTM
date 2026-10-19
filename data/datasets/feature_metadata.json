@@ -1,0 +1,268 @@
+{
+  "config": {
+    "window_size": 60,
+    "prediction_horizon": 10,
+    "label_scheme": "5class",
+    "label_mode": "vol_scaled",
+    "vol_window": 20,
+    "feature_windows": {
+      "return_windows": [
+        1,
+        5,
+        10,
+        20,
+        50
+      ],
+      "ma_windows": [
+        10,
+        50
+      ],
+      "rsi_window": 14,
+      "volume_ma_window": 20
+    },
+    "features": {
+      "use_log_returns": true,
+      "use_ma_ratios": true,
+      "use_rsi": true,
+      "use_volume_ratio": true,
+      "use_realized_vol": true
+    },
+    "macro_windows": {
+      "zscore_window": 20,
+      "ma_window": 20
+    },
+    "macro_features": {
+      "^VIX": [
+        "logret_5d"
+      ],
+      "DX-Y.NYB": [
+        "logret_5d"
+      ],
+      "^TNX": [
+        "logret_5d"
+      ]
+    },
+    "label_schemes": {
+      "3class": {
+        "classes": [
+          "BUY",
+          "HOLD",
+          "SELL"
+        ],
+        "class_mapping": {
+          "SELL": 0,
+          "HOLD": 1,
+          "BUY": 2
+        },
+        "thresholds": {
+          "sell": -0.005,
+          "buy": 0.005
+        },
+        "thresholds_vol": {
+          "sell": -0.5,
+          "buy": 0.5
+        }
+      },
+      "5class": {
+        "classes": [
+          "BUY_1000USD",
+          "BUY_500USD",
+          "HOLD",
+          "SELL_50%",
+          "SELL_100%"
+        ],
+        "class_mapping": {
+          "SELL_100%": 0,
+          "SELL_50%": 1,
+          "HOLD": 2,
+          "BUY_500USD": 3,
+          "BUY_1000USD": 4
+        },
+        "thresholds_vol": {
+          "strong_sell": -2.5,
+          "sell": -1.2,
+          "buy": 1.2,
+          "strong_buy": 2.5
+        },
+        "thresholds": {
+          "strong_sell": -0.07,
+          "sell": -0.02,
+          "buy": 0.02,
+          "strong_buy": 0.06
+        }
+      }
+    },
+    "cost": 0.001,
+    "split_ratios": {
+      "train": 0.8333,
+      "val": 0.0833,
+      "test": 0.0834
+    },
+    "scaler": "standard",
+    "random_seed": 1,
+    "input_csv": "data/processed/merged_processed_data.csv",
+    "output_dir": "data/datasets"
+  },
+  "feature_names": [
+    "logret_1d",
+    "logret_5d",
+    "logret_10d",
+    "logret_20d",
+    "logret_50d",
+    "log_price_ma10",
+    "log_price_ma50",
+    "rsi_14",
+    "log_vol_ratio",
+    "realized_vol",
+    "macro::^VIX::logret5",
+    "macro::DX-Y.NYB::logret5",
+    "macro::^TNX::logret5"
+  ],
+  "n_features": 13,
+  "window_size": 60,
+  "prediction_horizon": 10,
+  "label_scheme": "5class",
+  "label_mode": "vol_scaled",
+  "vol_window": 20,
+  "classes_display": [
+    "BUY_1000USD",
+    "BUY_500USD",
+    "HOLD",
+    "SELL_50%",
+    "SELL_100%"
+  ],
+  "ordered_classes": [
+    "SELL_100%",
+    "SELL_50%",
+    "HOLD",
+    "BUY_500USD",
+    "BUY_1000USD"
+  ],
+  "label_thresholds": {
+    "strong_sell": -2.5,
+    "sell": -1.2,
+    "buy": 1.2,
+    "strong_buy": 2.5
+  },
+  "label_edges": [
+    -2.5,
+    -1.2,
+    1.2,
+    2.5
+  ],
+  "label_edge_units": "sigma",
+  "class_mapping": {
+    "SELL_100%": 0,
+    "SELL_50%": 1,
+    "HOLD": 2,
+    "BUY_500USD": 3,
+    "BUY_1000USD": 4
+  },
+  "sector_tickers_used": [
+    "AAPL",
+    "MSFT",
+    "NVDA",
+    "GOOGL",
+    "AMZN",
+    "LLY",
+    "UNH",
+    "JNJ",
+    "MRK",
+    "ISRG",
+    "DE",
+    "ADM",
+    "BG",
+    "MOS",
+    "CF",
+    "XOM",
+    "CVX",
+    "COP",
+    "EOG",
+    "SLB",
+    "JPM",
+    "BLK",
+    "GS",
+    "MS",
+    "AXP"
+  ],
+  "macro_tickers_used": [
+    "^VIX",
+    "DX-Y.NYB",
+    "^TNX"
+  ],
+  "macro_features_active": {
+    "^VIX": [
+      "logret_5d"
+    ],
+    "DX-Y.NYB": [
+      "logret_5d"
+    ],
+    "^TNX": [
+      "logret_5d"
+    ]
+  },
+  "macro_windows": {
+    "zscore_window": 20,
+    "ma_window": 20
+  },
+  "has_volume": true,
+  "per_sample_arrays": {
+    "ids.npy": "ticker symbol for each sample (for per-ticker analysis)",
+    "dates.npy": "as-of date (last input day) for each sample; not a feature"
+  },
+  "input_csv": "/Applications/TFM_LSTM/data/processed/merged_processed_data.csv",
+  "date_range": {
+    "train": [
+      "2014-05-30",
+      "2024-05-23"
+    ],
+    "val": [
+      "2024-05-24",
+      "2025-05-27"
+    ],
+    "test": [
+      "2025-05-28",
+      "2026-05-29"
+    ]
+  },
+  "shapes": {
+    "train": [
+      60125,
+      60,
+      13
+    ],
+    "val": [
+      4800,
+      60,
+      13
+    ],
+    "test": [
+      4600,
+      60,
+      13
+    ]
+  },
+  "class_distribution": {
+    "train": {
+      "SELL_100%": 1298,
+      "SELL_50%": 5049,
+      "HOLD": 45686,
+      "BUY_500USD": 6960,
+      "BUY_1000USD": 1132
+    },
+    "val": {
+      "SELL_100%": 156,
+      "SELL_50%": 527,
+      "HOLD": 3587,
+      "BUY_500USD": 468,
+      "BUY_1000USD": 62
+    },
+    "test": {
+      "SELL_100%": 46,
+      "SELL_50%": 303,
+      "HOLD": 3523,
+      "BUY_500USD": 588,
+      "BUY_1000USD": 140
+    }
+  }
+}
