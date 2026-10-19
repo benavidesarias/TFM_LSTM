@@ -1,0 +1,178 @@
+{
+  "period": "12y",
+  "interval": "1d",
+  "total": 25,
+  "successful": 28,
+  "failed": 0,
+  "successes": [
+    {
+      "sector": "technology",
+      "ticker": "AAPL",
+      "rows": 3018,
+      "path": "/Applications/TFM_LSTM/data/raw/AAPL.csv"
+    },
+    {
+      "sector": "technology",
+      "ticker": "MSFT",
+      "rows": 3018,
+      "path": "/Applications/TFM_LSTM/data/raw/MSFT.csv"
+    },
+    {
+      "sector": "technology",
+      "ticker": "NVDA",
+      "rows": 3018,
+      "path": "/Applications/TFM_LSTM/data/raw/NVDA.csv"
+    },
+    {
+      "sector": "technology",
+      "ticker": "GOOGL",
+      "rows": 3018,
+      "path": "/Applications/TFM_LSTM/data/raw/GOOGL.csv"
+    },
+    {
+      "sector": "technology",
+      "ticker": "AMZN",
+      "rows": 3018,
+      "path": "/Applications/TFM_LSTM/data/raw/AMZN.csv"
+    },
+    {
+      "sector": "healthcare",
+      "ticker": "LLY",
+      "rows": 3018,
+      "path": "/Applications/TFM_LSTM/data/raw/LLY.csv"
+    },
+    {
+      "sector": "healthcare",
+      "ticker": "UNH",
+      "rows": 3018,
+      "path": "/Applications/TFM_LSTM/data/raw/UNH.csv"
+    },
+    {
+      "sector": "healthcare",
+      "ticker": "JNJ",
+      "rows": 3018,
+      "path": "/Applications/TFM_LSTM/data/raw/JNJ.csv"
+    },
+    {
+      "sector": "healthcare",
+      "ticker": "MRK",
+      "rows": 3018,
+      "path": "/Applications/TFM_LSTM/data/raw/MRK.csv"
+    },
+    {
+      "sector": "healthcare",
+      "ticker": "ISRG",
+      "rows": 3018,
+      "path": "/Applications/TFM_LSTM/data/raw/ISRG.csv"
+    },
+    {
+      "sector": "agriculture",
+      "ticker": "DE",
+      "rows": 3018,
+      "path": "/Applications/TFM_LSTM/data/raw/DE.csv"
+    },
+    {
+      "sector": "agriculture",
+      "ticker": "ADM",
+      "rows": 3018,
+      "path": "/Applications/TFM_LSTM/data/raw/ADM.csv"
+    },
+    {
+      "sector": "agriculture",
+      "ticker": "BG",
+      "rows": 3018,
+      "path": "/Applications/TFM_LSTM/data/raw/BG.csv"
+    },
+    {
+      "sector": "agriculture",
+      "ticker": "MOS",
+      "rows": 3018,
+      "path": "/Applications/TFM_LSTM/data/raw/MOS.csv"
+    },
+    {
+      "sector": "agriculture",
+      "ticker": "CF",
+      "rows": 3018,
+      "path": "/Applications/TFM_LSTM/data/raw/CF.csv"
+    },
+    {
+      "sector": "energy",
+      "ticker": "XOM",
+      "rows": 3018,
+      "path": "/Applications/TFM_LSTM/data/raw/XOM.csv"
+    },
+    {
+      "sector": "energy",
+      "ticker": "CVX",
+      "rows": 3018,
+      "path": "/Applications/TFM_LSTM/data/raw/CVX.csv"
+    },
+    {
+      "sector": "energy",
+      "ticker": "COP",
+      "rows": 3018,
+      "path": "/Applications/TFM_LSTM/data/raw/COP.csv"
+    },
+    {
+      "sector": "energy",
+      "ticker": "EOG",
+      "rows": 3018,
+      "path": "/Applications/TFM_LSTM/data/raw/EOG.csv"
+    },
+    {
+      "sector": "energy",
+      "ticker": "SLB",
+      "rows": 3018,
+      "path": "/Applications/TFM_LSTM/data/raw/SLB.csv"
+    },
+    {
+      "sector": "financial_services",
+      "ticker": "JPM",
+      "rows": 3018,
+      "path": "/Applications/TFM_LSTM/data/raw/JPM.csv"
+    },
+    {
+      "sector": "financial_services",
+      "ticker": "BLK",
+      "rows": 3018,
+      "path": "/Applications/TFM_LSTM/data/raw/BLK.csv"
+    },
+    {
+      "sector": "financial_services",
+      "ticker": "GS",
+      "rows": 3018,
+      "path": "/Applications/TFM_LSTM/data/raw/GS.csv"
+    },
+    {
+      "sector": "financial_services",
+      "ticker": "MS",
+      "rows": 3018,
+      "path": "/Applications/TFM_LSTM/data/raw/MS.csv"
+    },
+    {
+      "sector": "financial_services",
+      "ticker": "AXP",
+      "rows": 3018,
+      "path": "/Applications/TFM_LSTM/data/raw/AXP.csv"
+    },
+    {
+      "sector": "macro",
+      "ticker": "^VIX",
+      "rows": 3020,
+      "path": "/Applications/TFM_LSTM/data/raw/^VIX.csv"
+    },
+    {
+      "sector": "macro",
+      "ticker": "DX-Y.NYB",
+      "rows": 3019,
+      "path": "/Applications/TFM_LSTM/data/raw/DX-Y.NYB.csv"
+    },
+    {
+      "sector": "macro",
+      "ticker": "^TNX",
+      "rows": 3018,
+      "path": "/Applications/TFM_LSTM/data/raw/^TNX.csv"
+    }
+  ],
+  "failures": []
+}

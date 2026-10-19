@@ -1,0 +1,57 @@
+{
+  "config": {
+    "learning_rate": 0.001,
+    "epochs": 24,
+    "batch_size": 64,
+    "optimizer": "adam",
+    "loss": "sparse_categorical_crossentropy",
+    "early_stopping": {
+      "enabled": true,
+      "monitor": "val_loss",
+      "patience": 5,
+      "restore_best_weights": true
+    },
+    "reduce_lr": {
+      "enabled": true,
+      "monitor": "val_loss",
+      "factor": 0.33,
+      "patience": 5,
+      "min_lr": 1e-07
+    },
+    "use_class_weights": true,
+    "shuffle": true,
+    "random_seed": 42,
+    "dataset_dir": "data/datasets",
+    "model_dir": "data/models",
+    "model_filename": "lstm_trend_classifier.keras"
+  },
+  "feature_names": [
+    "logret_1d",
+    "logret_5d",
+    "logret_10d",
+    "logret_20d",
+    "logret_50d",
+    "log_price_ma10",
+    "log_price_ma50",
+    "rsi_14",
+    "log_vol_ratio",
+    "realized_vol",
+    "macro::^VIX::logret5",
+    "macro::DX-Y.NYB::logret5",
+    "macro::^TNX::logret5"
+  ],
+  "class_names": [
+    "SELL_100%",
+    "SELL_50%",
+    "HOLD",
+    "BUY_500USD",
+    "BUY_1000USD"
+  ],
+  "window_size": 60,
+  "n_features": 13,
+  "epochs_trained": 14,
+  "best_epoch": 9,
+  "best_val_loss": 1.3640265464782715,
+  "best_val_accuracy": 0.42270833253860474,
+  "model_path": "/Applications/TFM_LSTM/data/models/lstm_trend_classifier.keras"
+}
