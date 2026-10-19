@@ -1,0 +1,83 @@
+{
+  "window_size": 60,
+  "prediction_horizon": 10,
+  "label_scheme": "5class",
+  "label_mode": "vol_scaled",
+  "vol_window": 20,
+  "feature_windows": {
+    "return_windows": [1,5,10,20,50],
+    "ma_windows": [10,50],
+    "rsi_window": 14,
+    "volume_ma_window": 20
+  },
+  "features": {
+    "use_log_returns": true,
+    "use_ma_ratios": true,
+    "use_rsi": true,
+    "use_volume_ratio": true,
+    "use_realized_vol": true
+  },
+  "macro_windows": {
+    "zscore_window": 20,
+    "ma_window": 20
+  },
+  "macro_features": {
+    "^VIX": ["logret_5d"],
+    "DX-Y.NYB": ["logret_5d"],
+    "^TNX": ["logret_5d"]
+  },
+  "label_schemes": {
+    "3class": {
+      "classes": [
+        "BUY",
+        "HOLD",
+        "SELL"
+      ],
+      "class_mapping": {
+        "SELL": 0,
+        "HOLD": 1,
+        "BUY": 2
+      },
+      "thresholds": {
+        "sell": -0.005,
+        "buy": 0.005
+      },
+      "thresholds_vol": {
+        "sell": -0.5,
+        "buy": 0.5
+      }
+    },
+    "5class": {
+      "classes": [ "BUY_1000USD","BUY_500USD","HOLD","SELL_50%","SELL_100%"],
+      "class_mapping": {
+        "SELL_100%": 0,
+        "SELL_50%": 1,
+        "HOLD": 2,
+        "BUY_500USD": 3,
+        "BUY_1000USD": 4
+      },
+      "thresholds_vol": {
+        "strong_sell": -2.5,
+        "sell": -1.2,
+        "buy": 1.2,
+        "strong_buy": 2.5
+      },
+      "thresholds": {
+        "strong_sell": -0.07,
+        "sell": -0.02,
+        "buy": 0.02,
+        "strong_buy": 0.06
+      }
+    }
+  },
+  "cost": 0.001,
+  "split_ratios": {
+    "train": 0.8333,
+    "val": 0.0833,
+    "test": 0.0834
+  },
+  "scaler": "standard",
+  "random_seed": 1,
+  "input_csv": "data/processed/merged_processed_data.csv",
+  "output_dir": "data/datasets"
+}

@@ -1,0 +1,26 @@
+{
+  "learning_rate": 0.001,
+  "epochs": 24,
+  "batch_size": 64,
+  "optimizer": "adam",
+  "loss": "sparse_categorical_crossentropy",
+  "early_stopping": {
+    "enabled": true,
+    "monitor": "val_loss",
+    "patience": 5,
+    "restore_best_weights": true
+  },
+  "reduce_lr": {
+    "enabled": true,
+    "monitor": "val_loss",
+    "factor": 0.33,
+    "patience": 5,
+    "min_lr": 1e-07
+  },
+  "use_class_weights": true,
+  "shuffle": true,
+  "random_seed": 42,
+  "dataset_dir": "data/datasets",
+  "model_dir": "data/models",
+  "model_filename": "lstm_trend_classifier.keras"
+}

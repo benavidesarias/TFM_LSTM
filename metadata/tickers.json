@@ -1,0 +1,48 @@
+{
+  "default_period_years": 12,
+  "default_interval": "1d",
+  "sectors_columns_to_keep": ["Adj Close","Volume"],
+  "macro_columns_to_keep": ["Adj Close"],
+  "sectors": {
+    "technology": {
+      "AAPL":  "Apple Inc.",
+      "MSFT":  "Microsoft Corporation",
+      "NVDA":  "NVIDIA Corporation",
+      "GOOGL": "Alphabet Inc.",
+      "AMZN":  "Amazon.com, Inc."
+    },
+    "healthcare": {
+      "LLY": "Eli Lilly and Company",
+      "UNH": "UnitedHealth Group",
+      "JNJ": "Johnson & Johnson",
+      "MRK": "Merck Sharp and Dohme",
+      "ISRG": "Intuitive Surgical"
+    },
+    "agriculture": {
+      "DE":  "Deere & Company",
+      "ADM": "Archer-Daniels-Midland Company",
+      "BG":  "Bunge Global SA",
+      "MOS": "The Mosaic Company",
+      "CF": "CF Industries Holdings Inc."
+    },
+    "energy": {
+      "XOM":  "Exxon Mobil Corporation",
+      "CVX":  "Chevron Corporation",
+      "COP": "Shell plc",
+      "EOG":  "EOG Resources, Inc.",
+      "SLB":   "Schlumberger N.V."
+    },
+    "financial_services": {
+      "JPM": "JPMorgan Chase & Co.",
+      "BLK": "The Blackstone Group Inc.",
+      "GS":  "The Goldman Sachs Group, Inc.",
+      "MS":  "Morgan Stanley",
+      "AXP": "American Express Company"
+    }
+  },
+  "macro": {
+    "^VIX":     "CBOE Volatility Index",
+    "DX-Y.NYB": "U.S. Dollar Index (DXY)",
+    "^TNX":     "CBOE 10-Year Treasury Note Yield Index"
+  }
+}
